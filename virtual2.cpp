@@ -17,16 +17,10 @@ public:
 	{
 		cout << "An object of type A was created " << endl;
 	}
-	//Try one of these three lines at a time and inspect the output
 	virtual void Draw() = 0;//body cannot be defined/body definition ignored (pure function)
-	//virtual void Draw();
-	//void Draw();
 
-	// Try one of the two lines below at a time and inspect the output in detail
-	//virtual ~A();
-	~A();
-	// The virtual destructor will force the resources to be destroyed in a proper order
-	// when you delete a base class pointer pointing to a derived class object.
+
+	virtual ~A();
 };
 void A::Draw()
 {
@@ -81,6 +75,7 @@ public:
 
 void C::Draw()
 {
+	//A::Draw();  // This will call the base class pure virtual Draw function
 	cout << "An object of type C is drawn " << endl;
 }
 
@@ -94,7 +89,6 @@ int main()
 {
 	A *APtr0 = nullptr;  // Change the type of this pointer to see different effects
 
-// Try one of these lines at a time and inspect the output
 	APtr0 = new C;
 	if(APtr0 == nullptr)
 	{
@@ -107,9 +101,6 @@ int main()
 	//std::cout << "objectC data " << objectC.getC()  <<  " " << APtr0->getC() << std::endl;
 	if(APtr0 != nullptr)
 		delete APtr0;
-
-	//std::cin.get();
-
 
 	return 0;
 }
