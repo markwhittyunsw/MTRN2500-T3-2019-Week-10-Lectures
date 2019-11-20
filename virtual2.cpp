@@ -1,7 +1,7 @@
 // virtual2 by Mark Whitty to show the use of the following C++ constructs:
 //  - pure virtual functions
 //  - implementing pure virtual functions in the base class
-//  - VTABLES
+//  - VTABLES (see lecture notes)
 //  - interfaces
 
 #include <iostream>
