@@ -5,7 +5,6 @@
 #include <line.h>
 #include <link.h>
 #include <Stack.h>
-#include <conio.h>
 
 using namespace std;
 
@@ -61,7 +60,6 @@ int main()
 	PrintArray(L,2);
 	cout << "Links: " << endl << endl;
 	PrintArray(Lk,5, 2);
-	_getch();
 	return 0;
 }
 
