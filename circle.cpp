@@ -3,7 +3,6 @@
 #include <math.h>
 #include "point.h"
 #include "circle.h"
-#include <GL/glut.h>
 
 using namespace std;
 
@@ -44,35 +43,9 @@ void Circle::SetRadius(double radius)
 }
 void Circle::Draw()
 {
-	double p, q, theta = 0.0;
-	glColor3f(R,G,B);
-	glLoadIdentity();
-	glBegin(GL_LINE_LOOP);
-	do
-	{
-		p = X + Radius*cos(theta);
-		q = Y + Radius*sin(theta);
-		glVertex2f(p,q);
-		theta += 0.005;
-	}
-	while(theta < 2*PI);
-	glEnd();
+	std::cout << "Drawing a circle" <<std::endl;
 }
 
-void Circle::DrawReverse() {
-	double p, q, theta = 0.0;
-	glColor3f(R, G, B);
-	glLoadIdentity();
-	glBegin(GL_LINE_LOOP);
-	do
-	{
-		p = X + Radius * cos(theta);
-		q = Y + Radius * sin(theta);
-		glVertex2f(p, q);
-		theta -= 0.005;
-	} while (fabs(theta) < 2 * PI);
-	glEnd();
-}
 
 // This function is redundant however provides better readability
 void Circle::Move(double x, double y) 
