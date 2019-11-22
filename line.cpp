@@ -77,14 +77,7 @@ void Line::Move(double x, double y, double angle)
 
 void Line::Draw()
 {
-	glColor3f(R,G,B);
-	// Draw a point
-	glLoadIdentity();
-	glBegin(GL_LINES);
-		glVertex2f(X,Y);
-		glVertex2f(GetEnd().GetX(),GetEnd().GetY());
-	glEnd();
-	glFlush();
+	std::cout << "Drawing a line" << std::endl;
 }
 
 // End of Line class definition   ============================================
