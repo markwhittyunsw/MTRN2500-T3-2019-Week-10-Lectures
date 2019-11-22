@@ -75,11 +75,7 @@ void Point::SetColour(double r, double g, double b)
 
 void Point::Draw()
 {
-	glColor3f(R,G,B);
-	glLoadIdentity();
-	glBegin(GL_POINTS);
-	glVertex2f(X,Y);
-	glEnd();
+	std::cout << "Drawing a point" << std::endl;
 }
 
 void Point::Move(double x, double y)
