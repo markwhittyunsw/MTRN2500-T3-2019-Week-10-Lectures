@@ -17,7 +17,6 @@ public:
 	double GetRadius();
 	void SetRadius(double radius);
 	void Draw();
-	void DrawReverse();
 	void Move(double x, double y); //inherited move is sufficient - see definition
 	friend ostream& operator<<(ostream& os, const Circle& c);
 };
