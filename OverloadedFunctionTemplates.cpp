@@ -5,7 +5,6 @@
 #include <circle.h>
 #include <line.h>
 #include <link.h>
-#include <conio.h>
 
 using namespace std;
 
@@ -55,13 +54,9 @@ int main()
 	// Template function
 	PrintArray(L,2);
 
-	_getch();
-
 	cout << "Links: " << endl << endl;
 	// Overloaded template function
 	PrintArray(Lk,5,9);
-
-	_getch();
 
 	return 0;
 }
