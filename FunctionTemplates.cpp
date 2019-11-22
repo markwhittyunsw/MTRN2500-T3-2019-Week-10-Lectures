@@ -5,7 +5,6 @@
 #include <circle.h>
 #include "line.h"
 #include "link.h"
-#include <conio.h>
 
 using namespace std;
 
@@ -45,7 +44,7 @@ int main()
 	cout << "Links: " << endl << endl;
 	// Template function
 	PrintArray(Lk,1);
-	_getch();
+
 	return 0;
 }
 
