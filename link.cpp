@@ -46,16 +46,7 @@ Link::~Link()
 
 void Link::Draw()
 {
-	Circle Start, End;
-	Line Top, Bottom;
-	Start = Circle(X,Y,Radius, R,G,B);
-	End = Circle(GetEnd(), Radius, R,G,B);
-	Top = Line(X-Radius*sin(Angle), Y+Radius*cos(Angle),Length, Angle, R,G,B);
-	Bottom = Line(X+Radius*sin(Angle), Y-Radius*cos(Angle),Length, Angle, R,G,B);
-	Start.Draw();
-	End.Draw();
-	Top.Draw();
-	Bottom.Draw();
+	std::cout << "Drawing a link" << std::endl;
 }//End of Link Class ==========================================================
 
 
